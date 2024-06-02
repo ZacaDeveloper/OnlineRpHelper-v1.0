@@ -4796,7 +4796,7 @@ end
 function funCMD.update()
 	sampAddChatMessage("{FFFFFF}[{EE4848}OnlineRpHelper{FFFFFF}]: Производится скачивание новой версии скрипта...", 0xEE4848)
 	local dir = dirml.."/OnlineRpHelper.lua"
-	local url = "https://github.com/TheMrThor/OnlineRpHelper/blob/master/OnlineRpHelper.lua?raw=true"
+	local url = "https://github.com/ZacaDeveloper/OnlineRpHelper/blob/main/OnlineRpHelper.lua?raw=true"
 	--local url = "https://drive.google.com/uc?export=download&id=1gph2P6bWI1NZRW6TTdtXsmJtwpIX8JaC"
 	downloadUrlToFile(url, dir, function(id, status, p1, p2)
 		if status == dlstatus.STATUSEX_ENDDOWNLOAD then
@@ -4852,7 +4852,7 @@ local erTx =
 				addOneOffSound(0, 0, 0, 1058)
 				sampAddChatMessage("{FFFFFF}[{EE4848}OnlineRpHelper{FFFFFF}]: Произошла ошибка при скачивании обновления. Похоже, скачиванию что-то мешает.", 0xEE4848)
 				sampShowDialog(2001, "{FF0000}Ошибка обновления", erTx, "Закрыть", "", 0)
-				setClipboardText("https://github.com/TheMrThor/OnlineRpHelper/blob/master/OnlineRpHelper.lua?raw=true")
+				setClipboardText("https://github.com/ZacaDeveloper/OnlineRpHelper/blob/main/OnlineRpHelper.lua?raw=true")
 				updWin.v = false
 			end
 		end
@@ -4869,7 +4869,7 @@ end
 function funCMD.updateCheck()
 	sampAddChatMessage("{FFFFFF}[{EE4848}OnlineRpHelper{FFFFFF}]: Проверяем наличие обновлений...", 0xEE4848)
 		local dir = dirml.."/OnlineRpHelper/files/update.med"
-		local url = "https://raw.githubusercontent.com/TheMrThor/OnlineRpHelper/master/update.med"
+		local url = "https://raw.githubusercontent.com/ZacaDeveloper/OnlineRpHelper/main/update.med"
 		downloadUrlToFile(url, dir, function(id, status, p1, p2)
 			if status == dlstatus.STATUS_ENDDOWNLOADDATA then
 				lua_thread.create(function()
